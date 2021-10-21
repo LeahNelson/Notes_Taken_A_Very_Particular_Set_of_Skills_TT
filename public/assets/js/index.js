@@ -71,10 +71,17 @@ const handleNoteSave = () => {
     title: noteTitle.value,
     text: noteText.value,
   };
-  saveNote(newNote).then(() => {
-    getAndRenderNotes();
-    renderActiveNote();
-  });
+  saveNote(newNote);
+  alert("YEEHAAW");
+  getAndRenderNotes();
+  renderActiveNote();
+
+
+
+  // saveNote(newNote).then(() => {
+  //   getAndRenderNotes();
+  //   renderActiveNote();
+  // });
 };
 
 // Delete the clicked note
@@ -86,10 +93,10 @@ const handleNoteDelete = (e) => {
   //alert(e.target);
   const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
   //alert(noteId);
-  // if (noteId === noteId) {
-  // //if (activeNote.id === noteId) {
-  //   activeNote = {};
-  // }
+  if (noteId === noteId) {
+  //if (activeNote.id === noteId) {
+    activeNote = {};
+  }
 
   deleteNote(noteId).then(() => {
     getAndRenderNotes();

@@ -76,3 +76,7 @@ body {
   padding: 20px;
   cursor: pointer;
 }
+.note-title {
+  color: Purple;
+  font-size: 2em;
+}

@@ -53,7 +53,8 @@ app.delete('/api/notes/:id', (req, res) => {
     console.log(requestedId)
     for (let i = 0; i < notesdb.length; i++) {
         if (requestedId === notesdb[i].id) {
-            const removed = notesdb.splice(i,i);
+            //const removed = notesdb.splice(i,i);
+            const removed = notesdb.splice(i,1);
             console.log(removed);
             utilfs.writeToFile('./db/db.json',notesdb);
             utilfs.readAndAppend(removed, './db/removed.json');
