@@ -82,7 +82,7 @@ app.post('/api/notes', (req, res) => {
         
       };
       console.log(response);
-      readAndAppend(newNote, '../db/db.json');
+      readAndAppend(newNote, './db/db.json');
     res.json(`Tip added successfully 🚀`);
   } else {
     res.error('Error in adding tip');
