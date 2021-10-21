@@ -3,7 +3,7 @@ const notesdb = require('./db/db.json');
 const path = require('path');
 const utilfs = require('./helpers/fsUtils')//readFromFile, writeToFile, readAndAppend 
 const ids = require('./helpers/uuid')
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const fs = require('fs');
 
 const app = express();
