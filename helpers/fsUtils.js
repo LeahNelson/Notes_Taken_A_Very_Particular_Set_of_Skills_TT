@@ -20,6 +20,7 @@ const writeToFile = (destination, content) =>
  *  @returns {void} Nothing
  */
 const readAndAppend = (content, file) => {
+  console.log("note data from append func", content);
   fs.readFile(file, 'utf8', (err, data) => {
     if (err) {
       console.error(err);
