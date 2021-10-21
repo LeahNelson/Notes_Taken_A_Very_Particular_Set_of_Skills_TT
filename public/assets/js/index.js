@@ -71,6 +71,7 @@ const handleNoteSave = () => {
     title: noteTitle.value,
     text: noteText.value,
   };
+  console.log("front New Note", newNote)
   saveNote(newNote);
   alert("YEEHAAW");
   getAndRenderNotes();

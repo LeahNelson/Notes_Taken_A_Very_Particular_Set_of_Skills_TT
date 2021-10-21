@@ -68,6 +68,7 @@ app.post('/api/notes', (req, res) => {
     // Log that a POST request was received
     console.info(`${req.method} request received to add a note`);
     const { title, text } = req.body;
+    console.log("back New Note",req.body);
     // Prepare a response object to send back to the client
     if (title && text) {
     const newNote = {
