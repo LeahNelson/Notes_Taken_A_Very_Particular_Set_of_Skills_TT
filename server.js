@@ -174,6 +174,7 @@ app.get('/api/notes/:id', (req, res) => {
   });
 
 const readAndAppend = (content, file) => {
+  console.log("server Append", content);
     fs.readFile(file, 'utf8', (err, data) => {
       if (err) {
         console.error(err);
